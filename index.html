@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+	<script src="require.js"></script>
+    <script type="text/javascript">
+        require(["a"]);
+		require(["b"],function(){
+			console.log('加载成功后执行的回调');
+		});
+    </script>
+</head>
+<body>
+<pre>
+防止js加载阻塞页面渲染
+使用程序调用的方式加载js，防出现如下丑陋的场景
+
+基本API
+	require会定义三个变量：define,require,requirejs，其中require === requirejs，一般使用require更简短
+		define 定义一个模块
+		require 加载依赖模块，并执行加载完后的回调函数
+		
+		
+require(["js/a"]);来加载该模块(注意require中的依赖是一个数组，即使只有一个依赖，你也必须使用数组来定义)，
+	requir API的第二个参数是callback，一个function，是用来处理加载完毕后的逻辑，		
+</pre>
+</body>
+</html>
